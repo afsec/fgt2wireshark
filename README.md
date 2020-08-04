@@ -19,10 +19,11 @@ printf "config vdom\nedit root\ndiagnose sniffer packet wan1 none 6 1000" | ssh 
 
 ### Converting packets from Fortigate Dump to Wireshark HexDump
 
-1. Open Wireshark
-2. Click **File**
-3. Click **Import from Hex Dump...**
-4. Click **Browse**
-5. Choose the file `dump_firewall.txt` and click **Open**
-6. Click **Import**
+1. Convert dump: `python3 fgt2wireshark.py dump_firewall.txt > dump_firewall-converted.txt`
+2. Open Wireshark
+3. Click **File**
+4. Click **Import from Hex Dump...**
+5. Click **Browse**
+6. Choose the file `dump_firewall-converted.txt` and click **Open**
+7. Click **Import**
 
